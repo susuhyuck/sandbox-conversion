@@ -1,4 +1,4 @@
-/* 예외는 어떻게 규범이 되는가 — 부록 렌더링 (의존성 없음, 데이터: assets/data.js) */
+/* 예외는 어떻게 규범이 되는가 — 부록 렌더링 (의존성 없음, 데이터: data.js) */
 (function () {
   "use strict";
   const D = window.DATA, M = D.meta;

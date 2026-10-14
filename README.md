@@ -7,17 +7,17 @@
 
 ## 구성
 
-| 경로 | 내용 |
+| 파일 | 내용 |
 |---|---|
 | `index.html` | 부록 페이지(부록 A 기술통계 · B Kaplan-Meier · C Cox와 가설 판정 · D 강건성·모형 가정 · E 전체 과제 238개 · F 사례 대응쌍 · G 자료 출처·수치 검증 · 참고문헌) |
-| `assets/data.js` | 페이지가 읽는 분석 결과(과제 238개, 생존곡선, Cox·강건성, 대응쌍 후보, 점검 결과) |
-| `assets/main.js`, `assets/style.css` | 차트·표 렌더링(외부 라이브러리 없음) |
-| `data/analysis_units.csv` | 규제 과제 단위 분석 자료(238행) |
-| `data/analysis_approvals.csv` | 승인 건 단위 자료(747행, 강건성 R3용) |
+| `data.js` | 페이지가 읽는 분석 결과(과제 238개, 생존곡선, Cox·강건성, 대응쌍 후보, 점검 결과) |
+| `main.js`, `style.css` | 차트·표 렌더링(외부 라이브러리 없음) |
+| `analysis_units.csv` | 규제 과제 단위 분석 자료(238행) |
+| `analysis_approvals.csv` | 승인 건 단위 자료(747행, 강건성 R3용) |
 
 ## 배포
 
-이 폴더의 내용을 저장소 `sandbox-conversion`의 루트에 올리고 Settings → Pages → Branch `main` / `(root)`로 지정한다.
+모든 파일을 폴더 없이 저장소 `sandbox-conversion`의 루트에 올리고 Settings → Pages → Branch `main` / `(root)`로 지정한다.
 
 ## 자료 출처
 

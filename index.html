@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>부록 · 예외는 어떻게 규범이 되는가</title>
+<meta name="description" content="규제샌드박스 특례의 법령정비 전환 결정요인 분석 — 2026 한국정책학회 추계학술대회 포스터 부록(분석 결과 표·그림)">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<article class="paper">
+
+<header class="doc-head">
+  <p class="label">부록 APPENDIX</p>
+  <h1>예외는 어떻게 규범이 되는가<small>규제샌드박스 특례의 법령정비 전환 결정요인 분석</small></h1>
+  <p class="meta">최수혁 · 건국대학교 행정학과 · 2026 한국정책학회 추계학술대회 대학(원)생 포스터 세션 (2026. 10. 15.~16.)</p>
+</header>
+<p class="doc-note">이 부록은 포스터에 요약한 분석의 전체 결과를 표와 그림으로 수록한다. 분석단위는 산업융합 규제샌드박스 실증특례의 규제 과제 238개(승인 747건)이며, 관측 기간은 2019년 2월부터 2025년 8월 8일까지다. 그림 위에 마우스를 올리면 세부 값이 표시된다.</p>
+
+<nav class="contents">
+  <p>목차</p>
+  <ol>
+    <li><a href="#A"><b>부록 A</b>분석 표본과 기술통계</a></li>
+    <li><a href="#B"><b>부록 B</b>Kaplan-Meier 생존분석</a></li>
+    <li><a href="#C"><b>부록 C</b>Cox 비례위험 회귀와 가설 판정</a></li>
+    <li><a href="#D"><b>부록 D</b>강건성 검증과 모형 가정</a></li>
+    <li><a href="#E"><b>부록 E</b>전환 과제와 전체 과제 목록</a></li>
+    <li><a href="#F"><b>부록 F</b>사례 선정과 대표 대응쌍</a></li>
+    <li><a href="#G"><b>부록 G</b>자료 출처와 수치 검증</a></li>
+    <li><a href="#R"><b>참고문헌</b></a></li>
+  </ol>
+</nav>
+
+<!-- 부록 A -->
+<section class="appx" id="A">
+  <h2><span>부록 A</span>분석 표본과 기술통계</h2>
+
+  <div class="exhibit">
+    <p class="cap"><b>표 A1</b><i>분석 표본의 구성</i></p>
+    <div class="tbl-wrap"><table class="apa" id="tA1"></table></div>
+    <p class="apa-note"><em>주.</em> 규제 과제는 같은 규제에 대한 여러 승인을 하나로 묶은 단위다(같은 과제명, 또는 같은 관련규정이면서 과제명 유사도 .50 이상). 같은 규제의 승인은 한 번의 법령 개정으로 함께 전환되므로 독립된 관측이 아니다.</p>
+  </div>
+
+  <div class="exhibit">
+    <p class="cap"><b>그림 A1</b><i>변수 범주별 48개월 누적 전환율과 95% 신뢰구간</i></p>
+    <div class="fig"><div class="chart wide" id="fA1"></div></div>
+    <p class="apa-note"><em>주.</em> 점은 Kaplan-Meier 추정치, 세로선은 95% 신뢰구간, 회색 띠는 가설이 예상한 방향, 점선은 전체 평균이다. 사회적 주목도 3분위는 기술용이다.</p>
+  </div>
+
+  <div class="exhibit">
+    <p class="cap"><b>표 A2</b><i>변수 범주별 과제 수, 전환 수, 누적 전환율</i></p>
+    <div class="tbl-wrap"><table class="apa" id="tA2"></table></div>
+    <p class="apa-note"><em>주.</em> 누적 전환율은 Kaplan-Meier 추정치(1 − S(t))이며, 95% CI는 48개월 누적 전환율의 신뢰구간이다. 중위 전환기간에 도달한 범주는 없다.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="exhibit">
+      <p class="cap"><b>그림 A2</b><i>최초 승인연도별 과제 수와 전환</i></p>
+      <div class="fig"><div class="chart" id="fA2"></div></div>
+    </div>
+    <div class="exhibit">
+      <p class="cap"><b>그림 A3</b><i>승인 전 12개월 기사 수 분포와 전환</i></p>
+      <div class="fig"><div class="chart" id="fA3"></div></div>
+    </div>
+  </div>
+  <p class="apa-note"><em>주.</em> 막대 위 숫자는 전환 수/과제 수다. 기사 수는 빅카인즈 검색 결과(언론사·분류 전체, 제목+본문)다.</p>
+
+  <div class="grid2">
+    <div class="exhibit">
+      <p class="cap"><b>표 A3</b><i>관할 구조 × 규제 장벽 유형별 과제 수와 전환</i></p>
+      <div class="tbl-wrap"><table class="apa" id="tA3"></table></div>
+      <p class="apa-note"><em>주.</em> 칸 값은 과제 수 / 전환 수(전환율). 주관부처 단독 과제 111개 중 84개(75.7%)가 기준 부재형이다.</p>
+    </div>
+    <div class="exhibit">
+      <p class="cap"><b>표 A4</b><i>독립변수 간 연관성</i></p>
+      <div class="tbl-wrap"><table class="apa" id="tA4"></table></div>
+      <p class="apa-note"><em>주.</em> 연속성 보정 없는 χ² 기준. V ≥ .50인 쌍은 없다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 부록 B -->
+<section class="appx" id="B">
+  <h2><span>부록 B</span>Kaplan-Meier 생존분석</h2>
+  <div class="exhibit">
+    <p class="cap"><b>그림 B1</b><i>전체 규제 과제의 누적 전환 확률</i></p>
+    <div class="fig"><div class="chart" id="fB1"></div></div>
+    <p class="apa-note"><em>주.</em> 세로 눈금은 중도절단(관측 종료일까지 미전환)이다.</p>
+  </div>
+  <div class="exhibit">
+    <p class="cap"><b>그림 B2</b><i>변수 범주별 누적 전환 확률</i></p>
+    <div class="grid2" id="fB2"></div>
+    <p class="apa-note"><em>주.</em> (a) 입법형식 위계, (b) 관할 구조, (c) 규제 장벽 유형, (d) 사회적 주목도 3분위(기술용). 선 모양으로도 범주를 구분했다.</p>
+  </div>
+  <div class="exhibit">
+    <p class="cap"><b>표 B1</b><i>Log-rank 검정 결과</i></p>
+    <div class="tbl-wrap"><table class="apa" id="tB1"></table></div>
+    <p class="apa-note"><em>주.</em> 이분형 검정은 가설 판정(표 C2)에 사용했다. 법률 = 법률 단계 대 그 외, 타 부처 관여 = 타 부처 단독·복수 부처 대 주관부처 단독.</p>
+  </div>
+</section>
+
+<!-- 부록 C -->
+<section class="appx" id="C">
+  <h2><span>부록 C</span>Cox 비례위험 회귀와 가설 판정</h2>
+  <div class="exhibit">
+    <p class="cap"><b>표 C1</b><i>법령정비 전환에 대한 층화 Cox 비례위험 회귀(M1)</i></p>
+    <div class="tbl-wrap"><table class="apa" id="tC1"></table></div>
+    <p class="apa-note" id="tC1-note"></p>
+  </div>
+  <div class="exhibit">
+    <p class="cap"><b>그림 C1</b><i>위험비와 95% 신뢰구간: 주 모형과 강건성 모형</i></p>
+    <div class="fig"><div class="chart" id="fC1"></div></div>
+    <p class="apa-note"><em>주.</em> 로그 척도. 위험비가 1보다 작으면 전환이 늦거나 덜 일어났음을 뜻한다. R3·R4는 표 D1 참조.</p>
+  </div>
+  <div class="exhibit">
+    <p class="cap"><b>표 C2</b><i>가설 판정</i></p>
+    <div class="tbl-wrap"><table class="apa" id="tC2"></table></div>
+    <p class="apa-note"><em>주.</em> 판정 기준(분석 전 고정): 지지 = 기대 방향이고 이분형 log-rank와 Cox 모두 <em>p</em> &lt; .05, 부분지지 = 기대 방향이고 둘 중 하나 <em>p</em> &lt; .05 또는 둘 다 <em>p</em> &lt; .10, 기각 = 그 밖. 전환 사건이 30건 미만이면 주목도 모형(M2)과 상호작용 모형(M3)을 추정하지 않는다는 사전 규칙에 따라 H4·H5는 검증 불가다.</p>
+  </div>
+</section>
+
+<!-- 부록 D -->
+<section class="appx" id="D">
+  <h2><span>부록 D</span>강건성 검증과 모형 가정</h2>
+  <div class="exhibit">
+    <p class="cap"><b>표 D1</b><i>강건성 검증</i></p>
+    <div class="tbl-wrap"><table class="apa" id="tD1"></table></div>
+    <p class="apa-note"><em>주.</em> R1은 최초 승인이 2021년 8월 8일 이전인 과제의 48개월 내 전환 여부. R3는 전환 이후 승인 0건. R4는 전환 0건인 2024·2025년을 2023년 범주와 병합했고 BFGS로 추정했다. R2(광의 전환)는 원자료에 법령해석·일부개선 구분이 없어 주 분석과 같으므로 생략했다.</p>
+  </div>
+  <div class="grid2">
+    <div class="exhibit">
+      <p class="cap"><b>표 D2</b><i>비례위험 가정 검정(Schoenfeld 잔차)</i></p>
+      <div class="tbl-wrap"><table class="apa" id="tD2"></table></div>
+      <p class="apa-note"><em>주.</em> rank 시간 변환, 승인연도 층화.</p>
+    </div>
+    <div class="exhibit">
+      <p class="cap"><b>표 D3</b><i>시간의존 보충모형</i></p>
+      <div class="tbl-wrap"><table class="apa" id="tD3"></table></div>
+      <p class="apa-note"><em>주.</em> 금지·제한형의 비례위험 위반 의심에 따라 '변수 × ln(t)'를 추가했다. 상호작용이 유의하지 않아 주 모형의 결론은 바뀌지 않는다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 부록 E -->
+<section class="appx" id="E">
+  <h2><span>부록 E</span>전환 과제와 전체 과제 목록</h2>
+  <div class="exhibit">
+    <p class="cap"><b>그림 E1</b><i>전환된 26개 과제의 최초 승인부터 개선법령 시행까지 기간</i></p>
+    <div class="fig"><div class="chart wide" id="fE1"></div></div>
+    <p class="apa-note"><em>주.</em> 막대 색은 관할 구조. 시행일은 한국산업기술진흥원 규제법령현황 기준이다.</p>
+  </div>
+  <div class="exhibit">
+    <p class="cap"><b>그림 E2</b><i>규제 과제 238개의 관찰 기간과 전환 시점</i></p>
+    <div class="fig"><div class="chart wide" id="fE2"></div></div>
+    <p class="apa-note"><em>주.</em> 각 선은 한 과제의 최초 승인부터 전환(●) 또는 관측 종료일(2025. 8. 8.)까지다. 관할 구조별·승인일 순으로 정렬했다.</p>
+  </div>
+  <div class="exhibit">
+    <p class="cap"><b>표 E1</b><i>분석 대상 규제 과제 전체 목록과 코딩값</i></p>
+    <div class="filters">
+      <input id="f-q" type="search" placeholder="과제명·관련규정·소관기관 검색">
+      <select id="f-x2"><option value="">관할 구조 전체</option><option value="0">주관부처 단독</option><option value="1">타 부처 단독</option><option value="2">복수 부처</option></select>
+      <select id="f-ev"><option value="">결과 전체</option><option value="1">전환</option><option value="0">미전환</option></select>
+    </div>
+    <div class="scroll"><table class="apa" id="tE1"></table></div>
+    <p class="apa-note" id="tE1-note"></p>
+  </div>
+</section>
+
+<!-- 부록 F -->
+<section class="appx" id="F">
+  <h2><span>부록 F</span>사례 선정과 대표 대응쌍</h2>
+  <div class="exhibit">
+    <p class="cap"><b>표 F1</b><i>정량 자료 기반 전환·미전환 대응쌍 후보</i></p>
+    <div class="tbl-wrap"><table class="apa" id="tF1"></table></div>
+    <p class="apa-note"><em>주.</em> 전환 과제마다 관할 구조가 같고, 해당 과제의 전환 기간 이상 미전환 상태로 관찰된 과제 중 위계·장벽 유형·승인 시기가 가장 가까운 과제를 짝지었다(거리 = 2×|위계 차| + |장벽 차| + 승인 시기 차(년)). 심층 과정추적은 이 후보와 정량분석의 퍼즐(H2 반대 방향, H3 방향 역전)을 함께 고려해 선정한 대표 2쌍(표 F2·F3, 포스터 수록)에 대해 수행했다.</p>
+  </div>
+  <div class="exhibit">
+    <p class="cap"><b>표 F2</b><i>대표쌍 A: 규제 장벽 유형의 차이</i></p>
+    <div class="tbl-wrap"><table class="apa" id="tF2"></table></div>
+    <p class="apa-note" id="tF2-note"></p>
+  </div>
+  <div class="exhibit">
+    <p class="cap"><b>표 F3</b><i>대표쌍 B: 기존 기술기준 체계의 유무</i></p>
+    <div class="tbl-wrap"><table class="apa" id="tF3"></table></div>
+    <p class="apa-note" id="tF3-note"></p>
+  </div>
+</section>
+
+<!-- 부록 G -->
+<section class="appx" id="G">
+  <h2><span>부록 G</span>자료 출처와 수치 검증</h2>
+  <div class="exhibit">
+    <p class="cap"><b>표 G1</b><i>자료 출처와 변수 측정</i></p>
+    <div class="tbl-wrap"><table class="apa" id="tG1"></table></div>
+  </div>
+  <div class="exhibit">
+    <p class="cap"><b>표 G2</b><i>독립 재계산에 의한 수치 검증</i></p>
+    <div class="tbl-wrap"><table class="apa" id="tG2"></table></div>
+    <p class="apa-note"><em>주.</em> 분석 코드와 별도로 Breslow 층화 부분우도 최적화, Kaplan-Meier·log-rank 직접 계산, 파생변수 재계산을 구현해 대조했다. 분석 도구: Python 3.14, statsmodels 0.15, lifelines 0.30. 내려받기: <a href="data/analysis_units.csv">과제 단위 자료(CSV)</a> · <a href="data/analysis_approvals.csv">승인 건 단위 자료(CSV)</a>.</p>
+  </div>
+</section>
+
+<!-- 참고문헌 -->
+<section class="appx refs" id="R">
+  <h2>참고문헌</h2>
+  <h3>문헌</h3>
+  <p>김권식, 이재훈, 이광훈. (2025). 규제샌드박스 특례 현황 및 쟁점 비교분석: 규제자유특구와 ICT 규제샌드박스를 중심으로. <i>법과 기업 연구, 15</i>(3), 3–32. https://doi.org/10.35505/sjlb.2025.12.15.3.3</p>
+  <!-- 김익환·남정민 (2025): 서지 정보 확인 후 추가 -->
+  <p>문우진. (2014). 거부권행사자, 의제설정자, 정당규율성과 입법효율성: 거부권행사자 이론 및 경험분석. <i>한국정치학회보, 48</i>(5), 67–96.</p>
+  <p>박종준. (2021). 실증을 위한 규제특례 제도에 관한 공법적 고찰. <i>법조, 70</i>(1), 7–41.</p>
+  <p>윤영규, 조윤수, 정혜영. (2019). 국회 법안 검토 기간의 생존함수 추정: 제17, 18, 19대 국회의 사례를 바탕으로. <i>응용통계연구, 32</i>(4), 503–515. https://doi.org/10.5351/KJAS.2019.32.4.503</p>
+  <p>이민호, 안혁근, 김성부. (2022). <i>규제혁신제도로서 규제샌드박스의 성과평가 및 발전방안</i> (KIPA 연구보고서 2022-06). 한국행정연구원.</p>
+  <p>이종찬. (2014). 제도변화에 대한 이론적 고찰: 후기 신제도주의의 쟁점과 한계. <i>한국정치학회보, 48</i>(1), 163–185.</p>
+  <p>이혜영. (2023). 한국의 규제샌드박스 특성 분석과 시사점: 산업융합 분야를 중심으로. <i>규제연구, 32</i>(1), 37–70. https://doi.org/10.22954/ksrs.2023.32.1.002</p>
+  <p>허용창. (2017). 부양의무자 기준 변천에 대한 역사적 제도주의 분석: 점진적 제도변화 이론을 적용하여. <i>사회복지정책, 44</i>(4), 132–159.</p>
+  <p>Box-Steffensmeier, J. M., &amp; Zorn, C. J. W. (2001). Duration models and proportional hazards in political science. <i>American Journal of Political Science, 45</i>(4), 972–988.</p>
+  <p>Golub, J. (2007). Survival analysis and European Union decision-making. <i>European Union Politics, 8</i>(2), 155–179. https://doi.org/10.1177/1465116507076428</p>
+  <p>In, J., &amp; Lee, D. K. (2018). Survival analysis: Part I — analysis of time-to-event. <i>Korean Journal of Anesthesiology, 71</i>(3), 182–191.</p>
+  <p>Kim, Y., &amp; Cho, K. (2026). Socio-technical transitions: Dynamic interactions between actors and regulatory responses in regulatory sandboxes. <i>Sustainability, 18</i>(3), Article 1345. https://doi.org/10.3390/su18031345</p>
+  <p>Mahoney, J., &amp; Thelen, K. (2010). A theory of gradual institutional change. In J. Mahoney &amp; K. Thelen (Eds.), <i>Explaining institutional change: Ambiguity, agency, and power</i> (pp. 1–37). Cambridge University Press.</p>
+  <p>Streeck, W., &amp; Thelen, K. (2005). Introduction: Institutional change in advanced political economies. In W. Streeck &amp; K. Thelen (Eds.), <i>Beyond continuity: Institutional change in advanced political economies</i> (pp. 1–39). Oxford University Press.</p>
+  <p>Tsebelis, G. (1995). Decision making in political systems: Veto players in presidentialism, parliamentarism, multicameralism and multipartyism. <i>British Journal of Political Science, 25</i>(3), 289–325.</p>
+  <h3>자료</h3>
+  <p>국무조정실. (n.d.). <i>규제샌드박스 현황: 산업융합</i> [데이터베이스]. 2026년 10월 13일 검색, https://www.sandbox.go.kr/sandbox.SandboxTaskSlPL</p>
+  <p>법제처. (n.d.). <i>국가법령정보 공동활용 Open API</i> [데이터베이스]. 2026년 10월 13일 검색, https://open.law.go.kr</p>
+  <p>한국산업기술진흥원. (2025). <i>한국산업기술진흥원_규제법령현황</i> [데이터셋]. 공공데이터포털. https://www.data.go.kr/data/15145223/fileData.do</p>
+  <p>한국산업기술진흥원. (2026). <i>한국산업기술진흥원_규제샌드박스 규제유형별 총괄 현황</i> [데이터셋]. 공공데이터포털. https://www.data.go.kr/data/15131435/fileData.do</p>
+  <p>한국언론진흥재단. (n.d.). <i>빅카인즈</i> [데이터베이스]. 2026년 10월 13일 검색, https://www.bigkinds.or.kr</p>
+  <h3>소프트웨어</h3>
+  <p>Davidson-Pilon, C. (2019). lifelines: Survival analysis in Python. <i>Journal of Open Source Software, 4</i>(40), 1317. https://doi.org/10.21105/joss.01317</p>
+  <p>Seabold, S., &amp; Perktold, J. (2010). statsmodels: Econometric and statistical modeling with Python. In <i>Proceedings of the 9th Python in Science Conference</i> (pp. 92–96).</p>
+</section>
+
+</article>
+<footer>© 2026 최수혁 · 건국대학교 행정학과 · 문의 <a href="mailto:choish1343@naver.com">choish1343@naver.com</a></footer>
+
+<div class="tip" id="tip"></div>
+<script src="assets/data.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

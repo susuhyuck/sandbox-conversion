@@ -2,21 +2,40 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>부록 · 예외는 어떻게 규범이 되는가</title>
 <meta name="description" content="규제샌드박스 특례의 법령정비 전환 결정요인 분석 — 2026 한국정책학회 추계학술대회 포스터 부록(분석 결과 표·그림)">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#1f6b45">
+<meta property="og:type" content="article">
+<meta property="og:title" content="부록 · 예외는 어떻게 규범이 되는가">
+<meta property="og:description" content="규제샌드박스 특례의 법령정비 전환 결정요인 분석 — 포스터 부록(분석 결과 표·그림)">
+<meta property="og:url" content="https://susuhyuck.github.io/sandbox-conversion/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f6b45'/%3E%3Cpath d='M8 23V9h3v11h8v3z' fill='%23fff'/%3E%3Ccircle cx='23' cy='11' r='3' fill='%23eb6834'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<article class="paper">
+<nav class="jump" id="jump" aria-label="부록 바로가기">
+  <div class="jump-in">
+    <a href="#S">요약</a><a href="#A">A 기술통계</a><a href="#B">B 생존분석</a><a href="#C">C Cox·가설</a><a href="#D">D 강건성</a><a href="#E">E 과제 목록</a><a href="#F">F 사례</a><a href="#G">G 자료·검증</a><a href="#R">참고문헌</a>
+  </div>
+</nav>
+<article class="paper" id="top">
 
 <header class="doc-head">
   <p class="label">부록 APPENDIX</p>
   <h1>예외는 어떻게 규범이 되는가<small>규제샌드박스 특례의 법령정비 전환 결정요인 분석</small></h1>
   <p class="meta">최수혁 · 건국대학교 행정학과 · 2026 한국정책학회 추계학술대회 대학(원)생 포스터 세션 (2026. 10. 15.~16.)</p>
 </header>
-<p class="doc-note">이 부록은 포스터에 요약한 분석의 전체 결과를 표와 그림으로 수록한다. 분석단위는 산업융합 규제샌드박스 실증특례의 규제 과제 238개(승인 747건)이며, 관측 기간은 2019년 2월부터 2025년 8월 8일까지다. 그림 위에 마우스를 올리면 세부 값이 표시된다.</p>
+<p class="doc-note">이 부록은 포스터에 요약한 분석의 전체 결과를 표와 그림으로 수록한다. 분석단위는 산업융합 규제샌드박스 실증특례의 규제 과제 238개(승인 747건)이며, 관측 기간은 2019년 2월부터 2025년 8월 8일까지다. 그림의 점·막대·선을 누르거나 마우스를 올리면 세부 값이 표시된다.</p>
+
+<section class="summary" id="S" aria-label="결과 요약">
+  <h2>결과 요약</h2>
+  <div class="tiles" id="tiles"></div>
+  <ul class="hyp" id="hyp"></ul>
+</section>
 
 <nav class="contents">
   <p>목차</p>
@@ -44,8 +63,8 @@
 
   <div class="exhibit">
     <p class="cap"><b>그림 A1</b><i>변수 범주별 48개월 누적 전환율과 95% 신뢰구간</i></p>
-    <div class="fig"><div class="chart wide" id="fA1"></div></div>
-    <p class="apa-note"><em>주.</em> 점은 Kaplan-Meier 추정치, 세로선은 95% 신뢰구간, 회색 띠는 가설이 예상한 방향, 점선은 전체 평균이다. 사회적 주목도 3분위는 기술용이다.</p>
+    <div class="fig"><div class="panels" id="fA1"></div></div>
+    <p class="apa-note"><em>주.</em> 점은 Kaplan-Meier 추정치, 세로선은 95% 신뢰구간, 회색 띠는 가설이 예상한 방향, 점선은 전체 48개월 누적 전환율(16.2%)이다. 사회적 주목도 3분위는 기술용이다.</p>
   </div>
 
   <div class="exhibit">
@@ -64,7 +83,7 @@
       <div class="fig"><div class="chart" id="fA3"></div></div>
     </div>
   </div>
-  <p class="apa-note"><em>주.</em> 막대 위 숫자는 전환 수/과제 수다. 기사 수는 빅카인즈 검색 결과(언론사·분류 전체, 제목+본문)다.</p>
+  <p class="apa-note"><em>주.</em> 막대 옆 숫자는 전환 수/과제 수다. 기사 수는 빅카인즈 검색 결과(언론사·분류 전체, 제목+본문)다. 전환 자료(한국산업기술진흥원 규제법령현황)의 개선법령 시행일이 2019년 6월~2023년 10월에만 있어, 2023년 이후 승인 과제의 전환은 과소 측정됐을 수 있다(승인연도 층화로 일부 통제).</p>
 
   <div class="grid2">
     <div class="exhibit">
@@ -126,13 +145,13 @@
   <div class="exhibit">
     <p class="cap"><b>표 D1</b><i>강건성 검증</i></p>
     <div class="tbl-wrap"><table class="apa" id="tD1"></table></div>
-    <p class="apa-note"><em>주.</em> R1은 최초 승인이 2021년 8월 8일 이전인 과제의 48개월 내 전환 여부. R3는 전환 이후 승인 0건. R4는 전환 0건인 2024·2025년을 2023년 범주와 병합했고 BFGS로 추정했다. R2(광의 전환)는 원자료에 법령해석·일부개선 구분이 없어 주 분석과 같으므로 생략했다.</p>
+    <p class="apa-note"><em>주.</em> R1은 최초 승인이 2021년 8월 8일 이전인 과제의 48개월 내 전환 여부. R3는 승인 건 단위로 다시 추정했으며(lifelines, Efron 동률 처리), 제외 대상인 전환 이후 승인은 없었다. R4는 전환 0건인 2024·2025년을 2023년 범주와 병합했고 BFGS로 추정했다. R2(광의 전환)는 원자료에 법령해석·일부개선 구분이 없어 주 분석과 같으므로 생략했다.</p>
   </div>
   <div class="grid2">
     <div class="exhibit">
       <p class="cap"><b>표 D2</b><i>비례위험 가정 검정(Schoenfeld 잔차)</i></p>
       <div class="tbl-wrap"><table class="apa" id="tD2"></table></div>
-      <p class="apa-note"><em>주.</em> rank 시간 변환, 승인연도 층화.</p>
+      <p class="apa-note"><em>주.</em> rank 시간 변환, 승인연도 층화, lifelines(Efron 동률 처리).</p>
     </div>
     <div class="exhibit">
       <p class="cap"><b>표 D3</b><i>시간의존 보충모형</i></p>
@@ -147,13 +166,13 @@
   <h2><span>부록 E</span>전환 과제와 전체 과제 목록</h2>
   <div class="exhibit">
     <p class="cap"><b>그림 E1</b><i>전환된 26개 과제의 최초 승인부터 개선법령 시행까지 기간</i></p>
-    <div class="fig"><div class="chart wide" id="fE1"></div></div>
+    <div class="fig"><div class="chart" id="fE1"></div></div>
     <p class="apa-note"><em>주.</em> 막대 색은 관할 구조. 시행일은 한국산업기술진흥원 규제법령현황 기준이다.</p>
   </div>
   <div class="exhibit">
     <p class="cap"><b>그림 E2</b><i>규제 과제 238개의 관찰 기간과 전환 시점</i></p>
-    <div class="fig"><div class="chart wide" id="fE2"></div></div>
-    <p class="apa-note"><em>주.</em> 각 선은 한 과제의 최초 승인부터 전환(●) 또는 관측 종료일(2025. 8. 8.)까지다. 관할 구조별·승인일 순으로 정렬했다.</p>
+    <div class="fig"><div class="chart" id="fE2"></div></div>
+    <p class="apa-note"><em>주.</em> 각 선은 한 과제의 최초 승인부터 전환(●) 또는 관측 종료일(2025. 8. 8.)까지다. 관할 구조별·승인일 순으로 정렬했다. 세로 점선은 전환 자료의 마지막 개선법령 시행일(2023. 10. 19.)이다.</p>
   </div>
   <div class="exhibit">
     <p class="cap"><b>표 E1</b><i>분석 대상 규제 과제 전체 목록과 코딩값</i></p>
@@ -162,7 +181,8 @@
       <select id="f-x2"><option value="">관할 구조 전체</option><option value="0">주관부처 단독</option><option value="1">타 부처 단독</option><option value="2">복수 부처</option></select>
       <select id="f-ev"><option value="">결과 전체</option><option value="1">전환</option><option value="0">미전환</option></select>
     </div>
-    <div class="scroll"><table class="apa" id="tE1"></table></div>
+    <div class="tbl-wrap"><table class="apa" id="tE1"></table></div>
+    <div class="pager" id="tE1-pager"></div>
     <p class="apa-note" id="tE1-note"></p>
   </div>
 </section>
@@ -235,7 +255,8 @@
 </article>
 <footer>© 2026 최수혁 · 건국대학교 행정학과 · 문의 <a href="mailto:choish1343@naver.com">choish1343@naver.com</a></footer>
 
-<div class="tip" id="tip"></div>
+<a class="totop" id="totop" href="#top" aria-label="맨 위로">↑</a>
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
 <script src="data.js"></script>
 <script src="main.js"></script>
 </body>
